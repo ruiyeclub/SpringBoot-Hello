@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/7/17 19:46
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"cn.ruiyeclub.mapper"})
+@MapperScan(basePackages = {"cn.ruiyeclub.dao"})
 public class MybatisPlusApplication {
     public static void main(String[] args) {
         SpringApplication.run(MybatisPlusApplication.class, args);

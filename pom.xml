@@ -19,6 +19,7 @@
         <module>springboot-scheduled</module>
         <module>springboot-shiro</module>
         <module>springboot-jwt</module>
+        <module>springboot-upload</module>
     </modules>
 
 </project>

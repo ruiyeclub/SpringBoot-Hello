@@ -16,6 +16,7 @@
         <module>springboot-hibernate-validator</module>
         <module>springboot-mongodb</module>
         <module>springboot-redis</module>
+        <module>springboot-scheduled</module>
     </modules>
 
 </project>

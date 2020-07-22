@@ -17,6 +17,7 @@
         <module>springboot-mongodb</module>
         <module>springboot-redis</module>
         <module>springboot-scheduled</module>
+        <module>springboot-shiro</module>
     </modules>
 
 </project>

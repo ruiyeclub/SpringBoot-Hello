@@ -1,4 +1,4 @@
-package com.ruiyeclub.entity;
+package cn.ruiyeclub.entity;
 
 import lombok.Data;
 

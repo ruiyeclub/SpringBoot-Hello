@@ -1,6 +1,6 @@
-package com.ruiyeclub.controller;
+package cn.ruiyeclub.controller;
 
-import com.ruiyeclub.entity.Student;
+import cn.ruiyeclub.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
 import org.springframework.web.bind.annotation.*;

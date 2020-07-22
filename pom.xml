@@ -18,6 +18,7 @@
         <module>springboot-redis</module>
         <module>springboot-scheduled</module>
         <module>springboot-shiro</module>
+        <module>springboot-jwt</module>
     </modules>
 
 </project>

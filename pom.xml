@@ -15,6 +15,7 @@
         <module>springboot-aop-log</module>
         <module>springboot-hibernate-validator</module>
         <module>springboot-mongodb</module>
+        <module>springboot-redis</module>
     </modules>
 
 </project>

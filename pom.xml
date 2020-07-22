@@ -13,6 +13,7 @@
         <module>springboot-mybatis-plus</module>
         <module>springboot-swagger3</module>
         <module>springboot-aop-log</module>
+        <module>springboot-hibernate-validator</module>
     </modules>
 
 </project>

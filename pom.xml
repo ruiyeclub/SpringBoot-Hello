@@ -12,6 +12,7 @@
     <modules>
         <module>springboot-mybatis-plus</module>
         <module>springboot-swagger3</module>
+        <module>springboot-aop-log</module>
     </modules>
 
 </project>

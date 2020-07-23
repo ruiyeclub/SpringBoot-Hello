@@ -5,8 +5,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * (UserRecord)表数据库访问层
+ *
  * @author Ray。
- * @data 2020-07-17 21:51:09
+ * @date 2020-07-22 14:06:51
  */
 public interface UserRecordDao extends BaseMapper<UserRecord> {
 

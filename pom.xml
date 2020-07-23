@@ -12,6 +12,14 @@
     <modules>
         <module>springboot-mybatis-plus</module>
         <module>springboot-swagger3</module>
+        <module>springboot-aop-log</module>
+        <module>springboot-hibernate-validator</module>
+        <module>springboot-mongodb</module>
+        <module>springboot-redis</module>
+        <module>springboot-scheduled</module>
+        <module>springboot-shiro</module>
+        <module>springboot-jwt</module>
+        <module>springboot-upload</module>
     </modules>
 
 </project>

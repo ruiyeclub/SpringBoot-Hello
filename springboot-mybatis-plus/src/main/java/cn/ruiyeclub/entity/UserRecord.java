@@ -1,22 +1,23 @@
 package cn.ruiyeclub.entity;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import java.io.Serializable;
 
 /**
  * (UserRecord)表实体类
+ *
  * @author Ray。
- * @data 2020-07-17 21:51:08
+ * @date 2020-07-22 14:06:49
  */
 public class UserRecord extends Model<UserRecord> {
-    
+
     private Integer id;
-    
+
     private String name;
-    
+
     private Integer age;
-    
+
     private String email;
+
 
     public Integer getId() {
         return id;

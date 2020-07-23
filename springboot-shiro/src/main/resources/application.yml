@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    username: root
+    password: admin
+    #解决时区的报错
+    url: jdbc:mysql://localhost:3306/boot_hello?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  type-aliases-package: cn.ruiyeclub.pojo
+  mapper-locations: classpath:mapper/*.xml
+    # 连接池配置
+    initial-size: 5
+    min-idle: 5
+    max-active: 20
+    # 连接等待超时时间
+    max-wait: 30000
+    # 配置检测可以关闭的空闲连接间隔时间
+    time-between-eviction-runs-millis: 60000
+    # 配置连接在池中的最小生存时间
+    min-evictable-idle-time-millis: 300000
+    validation-query: select '1' from dual
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    pool-prepared-statements: true
+
+    #配置监控统计拦截的filters，stat：监控统计、wall：防御sql注入
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500

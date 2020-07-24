@@ -1,0 +1,6 @@
+#七牛的配置
+qiniu:
+  accessKey: yiepdScBcsZ01mNyYIpkDRWqzrCaaJlg2BiHmKGy
+  secretKey: l1Vk2B164Kzgf5b64hBmNkboHanDJqbKW9jpqcZS
+  bucketName: ruiyeclub
+  fileDomain: http://qiniu.ruiyeclub.cn

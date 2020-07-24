@@ -19,6 +19,7 @@ springboot-hibernate-validator        | [集成Hibernate Validator](https://www.
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
 springboot-mongodb                    | 集成MongoDB数据库
 springboot-mybatis-plus               | 集成Mybatis-Plus
+springboot-oss-qiniu                  | 集成七牛云存储
 springboot-redis                      | Redis数据库
 springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
@@ -38,8 +39,9 @@ springboot-upload                     | [实现本地文件上传](https://www.c
 
 ## 后续计划
 
-1. 添加七牛云对象存储
+1. 添加七牛云对象存储 [√]
 2. 添加RabbitMQ消息队列
+3. 
 
 ## 问题反馈
 

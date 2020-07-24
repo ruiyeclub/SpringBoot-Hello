@@ -20,6 +20,7 @@
         <module>springboot-shiro</module>
         <module>springboot-jwt</module>
         <module>springboot-upload</module>
+        <module>springboot-oss-qiniu</module>
     </modules>
 
 </project>

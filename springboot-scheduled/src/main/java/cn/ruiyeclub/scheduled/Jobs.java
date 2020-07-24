@@ -1,5 +1,6 @@
 package cn.ruiyeclub.scheduled;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * @create 2020-05-17 15:01
  */
 @Component
+@Async
 public class Jobs {
 
     /**

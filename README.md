@@ -41,7 +41,8 @@ springboot-upload                     | [实现本地文件上传](https://www.c
 
 1. 添加七牛云对象存储 [√]
 2. 添加RabbitMQ消息队列
-3. 
+3. 整合EasyExcel
+4. 整合Jpa
 
 ## 问题反馈
 

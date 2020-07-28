@@ -22,6 +22,7 @@
         <module>springboot-upload</module>
         <module>springboot-oss-qiniu</module>
         <module>springboot-easyexcel</module>
+        <module>springboot-mail</module>
     </modules>
 
 </project>

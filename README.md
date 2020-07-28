@@ -18,10 +18,10 @@ springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
-springboot-mongodb                    | 集成MongoDB数据库
+springboot-mongodb                    | 集成MongoDB数据库，使用mongoTemplate操作MongoDB
 springboot-mybatis-plus               | 集成Mybatis-Plus
-springboot-oss-qiniu                  | 集成七牛云存储
-springboot-redis                      | Redis数据库
+springboot-oss-qiniu                  | 集成七牛云存储，封装QiniuUtil实现文件上传
+springboot-redis                      | Redis数据库，使用redisTemplate操作Redis
 springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
 springboot-swagger3                   | [集成Swagger3自动生成API文档](https://www.cnblogs.com/ruiyeclub/p/13334826.html)
@@ -41,10 +41,11 @@ springboot-upload                     | [实现本地文件上传](https://www.c
 ## 后续计划
 
 1. 添加七牛云对象存储 [√]
-2. 添加RabbitMQ消息队列
-3. 整合EasyExcel [√]
-4. 整合Jpa
+2. 整合EasyExcel [√]
+3. 整合mail发送邮件
+4. 整合Jpa操作数据库
 5. 整合quartz定时任务
+6. 添加RabbitMQ消息队列
 
 ## 问题反馈
 

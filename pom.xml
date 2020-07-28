@@ -21,6 +21,7 @@
         <module>springboot-jwt</module>
         <module>springboot-upload</module>
         <module>springboot-oss-qiniu</module>
+        <module>springboot-easyexcel</module>
     </modules>
 
 </project>

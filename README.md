@@ -15,6 +15,7 @@ Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来�
 项目名称                               | 详情
 --------------------------------------|------------------------------------------------------------------------------------------
 springboot-aop-log                    | 使用AOP记录日志
+springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
 springboot-mongodb                    | 集成MongoDB数据库
@@ -41,8 +42,9 @@ springboot-upload                     | [实现本地文件上传](https://www.c
 
 1. 添加七牛云对象存储 [√]
 2. 添加RabbitMQ消息队列
-3. 整合EasyExcel
+3. 整合EasyExcel [√]
 4. 整合Jpa
+5. 整合quartz定时任务
 
 ## 问题反馈
 

@@ -23,6 +23,7 @@
         <module>springboot-oss-qiniu</module>
         <module>springboot-easyexcel</module>
         <module>springboot-mail</module>
+        <module>springboot-jpa</module>
     </modules>
 
 </project>

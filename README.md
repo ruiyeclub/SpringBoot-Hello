@@ -17,7 +17,7 @@ Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来�
 springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
-springboot-jpa                        | [整合Jpa实现增删改查]
+springboot-jpa                        | 整合Jpa实现增删改查
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
 springboot-mail                       | [整合mail，封装MailUtils发送邮件](https://www.cnblogs.com/ruiyeclub/p/13394493.html)
 springboot-mongodb                    | 集成MongoDB数据库，使用mongoTemplate操作MongoDB

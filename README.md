@@ -18,7 +18,7 @@ springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
-springboot-mail                       | 整合mail，封装MailUtils发送邮件
+springboot-mail                       | [整合mail，封装MailUtils发送邮件](https://www.cnblogs.com/ruiyeclub/p/13394493.html)
 springboot-mongodb                    | 集成MongoDB数据库，使用mongoTemplate操作MongoDB
 springboot-mybatis-plus               | 集成Mybatis-Plus
 springboot-oss-qiniu                  | 集成七牛云存储，封装QiniuUtil实现文件上传

@@ -28,6 +28,7 @@ springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
 springboot-swagger3                   | [集成Swagger3自动生成API文档](https://www.cnblogs.com/ruiyeclub/p/13334826.html)
 springboot-upload                     | [实现本地文件上传](https://www.cnblogs.com/ruiyeclub/p/12732154.html)
+springboot-validation                 | 集成validation参数验证
 
 ## 环境
 
@@ -49,6 +50,7 @@ springboot-upload                     | [实现本地文件上传](https://www.c
 5. 整合quartz定时任务
 6. 添加RabbitMQ消息队列
 7. 整合i18国际化
+8. Mybatis多数据源操作
 
 ## 问题反馈
 

@@ -24,6 +24,7 @@
         <module>springboot-easyexcel</module>
         <module>springboot-mail</module>
         <module>springboot-jpa</module>
+        <module>springboot-validation</module>
     </modules>
 
 </project>

@@ -17,6 +17,7 @@ Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来�
 springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
+springboot-i18n                       | 集成i18n实现后台国际化
 springboot-jpa                        | 整合Jpa实现增删改查
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
 springboot-mail                       | [整合mail，封装MailUtils发送邮件](https://www.cnblogs.com/ruiyeclub/p/13394493.html)
@@ -49,7 +50,7 @@ springboot-validation                 | 集成validation参数验证
 4. 整合Jpa操作数据库 [√]
 5. 整合quartz定时任务
 6. 添加RabbitMQ消息队列
-7. 整合i18国际化
+7. 整合i18国际化 [√]
 8. Mybatis多数据源操作
 
 ## 问题反馈

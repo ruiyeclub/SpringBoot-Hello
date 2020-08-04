@@ -25,6 +25,7 @@
         <module>springboot-mail</module>
         <module>springboot-jpa</module>
         <module>springboot-validation</module>
+        <module>springboot-i18n</module>
     </modules>
 
 </project>

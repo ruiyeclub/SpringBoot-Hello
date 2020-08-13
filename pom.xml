@@ -26,6 +26,7 @@
         <module>springboot-jpa</module>
         <module>springboot-validation</module>
         <module>springboot-i18n</module>
+        <module>springboot-undertow</module>
     </modules>
 
 </project>

@@ -3,8 +3,9 @@ package cn.ruiyeclub.service.impl;
 import cn.ruiyeclub.mapper.UserMapper;
 import cn.ruiyeclub.pojo.User;
 import cn.ruiyeclub.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author Ray。
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override

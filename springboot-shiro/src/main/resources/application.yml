@@ -1,7 +1,6 @@
 mybatis:
   type-aliases-package: cn.ruiyeclub.pojo
   mapper-locations: classpath:mapper/*.xml
-
 spring:
   datasource:
     username: root

@@ -23,6 +23,10 @@
         <module>springboot-oss-qiniu</module>
         <module>springboot-easyexcel</module>
         <module>springboot-mail</module>
+        <module>springboot-jpa</module>
+        <module>springboot-validation</module>
+        <module>springboot-i18n</module>
+        <module>springboot-undertow</module>
     </modules>
 
 </project>

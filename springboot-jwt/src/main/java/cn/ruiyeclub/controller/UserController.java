@@ -2,7 +2,7 @@ package cn.ruiyeclub.controller;
 
 import cn.ruiyeclub.annotation.CheckToken;
 import cn.ruiyeclub.annotation.LoginToken;
-import cn.ruiyeclub.entity.JsonData;
+import cn.ruiyeclub.utils.JsonData;
 import cn.ruiyeclub.entity.User;
 import cn.ruiyeclub.service.UserService;
 import cn.ruiyeclub.utils.JwtUtils;

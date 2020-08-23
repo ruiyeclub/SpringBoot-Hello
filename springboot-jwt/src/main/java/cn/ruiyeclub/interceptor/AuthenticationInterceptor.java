@@ -2,7 +2,7 @@ package cn.ruiyeclub.interceptor;
 
 import cn.ruiyeclub.annotation.CheckToken;
 import cn.ruiyeclub.annotation.LoginToken;
-import cn.ruiyeclub.entity.JsonData;
+import cn.ruiyeclub.utils.JsonData;
 import cn.ruiyeclub.utils.JwtUtils;
 import com.google.gson.Gson;
 import io.jsonwebtoken.Claims;

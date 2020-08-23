@@ -1,0 +1,14 @@
+server:
+  port: 81
+
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boot_hello?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update  #第一次建表create  后面用update，要不然每次重启都会新建表
+    show-sql: true

@@ -1,0 +1,7 @@
+server:
+  port: 82
+  undertow:
+    #每块buffer的空间大小,越小的空间被利用越充分，不要设置太大，以免影响其他应用，合适即可
+    buffer-size: 1024
+    #是否分配的直接内存(NIO直接分配的堆外内存)
+    direct-buffers: true

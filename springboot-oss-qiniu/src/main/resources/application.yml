@@ -2,5 +2,5 @@
 qiniu:
   accessKey: 123***789
   secretKey: 123***789
-  bucketName: 123***789
-  fileDomain: http://123***789
+  bucketName: 存储空间名
+  fileDomain: 存款空间域名

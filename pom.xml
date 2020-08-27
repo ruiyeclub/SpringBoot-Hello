@@ -27,6 +27,7 @@
         <module>springboot-validation</module>
         <module>springboot-i18n</module>
         <module>springboot-undertow</module>
+        <module>springboot-thymeleaf</module>
     </modules>
 
 </project>

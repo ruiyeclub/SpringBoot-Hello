@@ -28,6 +28,7 @@ springboot-redis                      | Redis数据库，使用redisTemplate操�
 springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
 springboot-swagger3                   | [集成Swagger3自动生成API文档](https://www.cnblogs.com/ruiyeclub/p/13334826.html)
+springboot-thymeleaf                  | 集成thymeleaf模板引擎
 springboot-undertow                   | 使用Undertow服务器代替Tomcat服务器
 springboot-upload                     | [实现本地文件上传](https://www.cnblogs.com/ruiyeclub/p/12732154.html)
 springboot-validation                 | 集成validation参数验证
@@ -49,10 +50,11 @@ springboot-validation                 | 集成validation参数验证
 2. 整合EasyExcel [√]
 3. 整合mail发送邮件 [√]
 4. 整合Jpa操作数据库 [√]
-5. 整合quartz定时任务
-6. 添加RabbitMQ消息队列
-7. 整合i18国际化 [√]
+5. 整合i18国际化 [√]
+6. 整合quartz定时任务
+7. 添加RabbitMQ消息队列
 8. Mybatis多数据源操作
+9. 整合Markdown文档编辑器
 
 ## 问题反馈
 

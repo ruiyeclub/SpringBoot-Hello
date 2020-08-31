@@ -18,11 +18,11 @@ import java.util.List;
 @Slf4j
 @SpringBootTest
 class EasyExcelApplicationTests {
-
+//删除多余配置
     @Test
     void readExcelTest() throws Exception {
         //读取excel
-        File file = new File("E:\\2.xlsx");
+        File file = new File("D:\\2.xlsx");
         InputStream inputStream = new FileInputStream(file);
         //导入excle
         List<ExcelModel> datas = ExcelUtil.readExcel(inputStream, ExcelModel.class, ExcelTypeEnum.XLSX);
@@ -38,7 +38,7 @@ class EasyExcelApplicationTests {
                     "下班时间" + i, "加班时长" + i, "备注" + i);
             excelModelList.add(excelModel);
         }
-        File file1 = new File("E:\\2.xlsx");
+        File file1 = new File("D:\\2.xlsx");
         ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream();
         byte[] bytes = ExcelUtil.writeExcel(outputStream1, excelModelList, ExcelModel.class, ExcelTypeEnum.XLSX);
         FileOutputStream outputStream = new FileOutputStream(file1);

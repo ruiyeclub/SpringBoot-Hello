@@ -28,6 +28,7 @@
         <module>springboot-i18n</module>
         <module>springboot-undertow</module>
         <module>springboot-thymeleaf</module>
+        <module>springboot-wxpay</module>
     </modules>
 
 </project>

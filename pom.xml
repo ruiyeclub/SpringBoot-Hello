@@ -29,6 +29,7 @@
         <module>springboot-undertow</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-wxpay</module>
+        <module>springboot-redis-mq</module>
     </modules>
 
 </project>

@@ -1,0 +1,32 @@
+server:
+  servlet:
+    # 请求数据转码UTF8
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+logging:
+  level:
+    web: debug
+    cn:
+      ruiyeclub:
+        rabbitmq: debug
+
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    host: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    # 打开消息确认机制
+    publisher-confirm-type: correlated
+    # 打开消息返回
+    publisher-returns: true
+    template:
+      mandatory: true
+    # 手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 2

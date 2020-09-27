@@ -30,6 +30,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-wxpay</module>
         <module>springboot-redis-mq</module>
+        <module>springboot-rabbitmq</module>
     </modules>
 
 </project>

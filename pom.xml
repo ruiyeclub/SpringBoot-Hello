@@ -31,6 +31,7 @@
         <module>springboot-wxpay</module>
         <module>springboot-redis-mq</module>
         <module>springboot-rabbitmq</module>
+        <module>springboot-redis-lock</module>
     </modules>
 
 </project>

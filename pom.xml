@@ -32,6 +32,7 @@
         <module>springboot-redis-mq</module>
         <module>springboot-rabbitmq</module>
         <module>springboot-redis-lock</module>
+        <module>springboot-vue-axios</module>
     </modules>
 
 </project>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Dept Page</title>
+</head>
+<body>
+    <div id="app">
+        <h1>The Dept Page</h1>
+        <table>
+            <thread>
+                <tr>
+                    <th>编号</th>
+                    <th>名称</th>
+                    <th>资源</th>
+                </tr>
+            </thread>
+
+            <tbody>
+                <tr v-for="d in dept">
+                    <td>{{d.deptno}}</td>
+                    <td>{{d.dname}}</td>
+                    <td>{{d.dbSource}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var vm=new Vue({//vue对象时vue.js应用的入口对象
+            el:"#app",//vue对象要监控的区域
+            data:{//此对象用于同步页面数据的一个对象
+                dept:{}
+            },
+            methods:{//同步与页面元素事件处理函数
+                findAll:function(){
+                    let url="dept/findAll";
+                    axios.get(url).then(function(result){
+                        this.vm.dept=result.data;
+                    });
+                }
+            },
+            mounted:function(){
+                this.findAll();
+            }
+        });
+    </script>
+</body>
+</html>

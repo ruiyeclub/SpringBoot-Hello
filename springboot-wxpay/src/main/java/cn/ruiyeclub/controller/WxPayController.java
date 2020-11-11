@@ -1,10 +1,13 @@
 package cn.ruiyeclub.controller;
 
+import cn.ruiyeclub.utils.IpUtil;
+import cn.ruiyeclub.utils.PayUtils;
 import com.github.binarywang.wxpay.bean.coupon.*;
 import com.github.binarywang.wxpay.bean.notify.WxPayNotifyResponse;
 import com.github.binarywang.wxpay.bean.notify.WxPayOrderNotifyResult;
 import com.github.binarywang.wxpay.bean.notify.WxPayRefundNotifyResult;
 import com.github.binarywang.wxpay.bean.notify.WxScanPayNotifyResult;
+import com.github.binarywang.wxpay.bean.order.WxPayMpOrderResult;
 import com.github.binarywang.wxpay.bean.request.*;
 import com.github.binarywang.wxpay.bean.result.*;
 import com.github.binarywang.wxpay.exception.WxPayException;
@@ -12,8 +15,11 @@ import com.github.binarywang.wxpay.service.WxPayService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.Date;
 
@@ -25,7 +31,12 @@ import java.util.Date;
 @RestController
 @RequestMapping("/pay")
 @AllArgsConstructor
+@Slf4j
 public class WxPayController {
+
+  @Value("${wx.pay.notifyUrl}")
+  private String notifyUrl;
+
   private WxPayService wxService;
 
   /**
@@ -92,8 +103,21 @@ public class WxPayController {
    */
   @ApiOperation(value = "统一下单，并组装所需支付参数")
   @PostMapping("/createOrder")
-  public <T> T createOrder(@RequestBody WxPayUnifiedOrderRequest request) throws WxPayException {
-    return this.wxService.createOrder(request);
+  public <T> T createOrder(@RequestBody WxPayUnifiedOrderRequest orderRequest, HttpServletRequest request) throws WxPayException {
+    //-------------------------必须要的参数 start
+    orderRequest.setBody("精英战场门票下单");
+    //表示小程序
+    orderRequest.setTradeType("JSAPI");
+    orderRequest.setOutTradeNo(PayUtils.get_nonce_str());
+    //单位分
+    orderRequest.setTotalFee(1);
+    orderRequest.setOpenid("openid");
+    orderRequest.setSpbillCreateIp(IpUtil.getRealIp(request));
+    orderRequest.setNotifyUrl(notifyUrl);
+    //-------------------------必须要的参数 end
+    log.info("微信支付参数：{}", orderRequest);
+
+    return this.wxService.createOrder(orderRequest);
   }
 
   /**
@@ -162,7 +186,7 @@ public class WxPayController {
   @PostMapping("/notify/order")
   public String parseOrderNotifyResult(@RequestBody String xmlData) throws WxPayException {
     final WxPayOrderNotifyResult notifyResult = this.wxService.parseOrderNotifyResult(xmlData);
-    // TODO 根据自己业务场景需要构造返回对象
+    // TODO 根据自己业务场景需要构造返回对象 主要业务写在回调中
     return WxPayNotifyResponse.success("成功");
   }
 

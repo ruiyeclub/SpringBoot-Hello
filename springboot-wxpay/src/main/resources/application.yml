@@ -12,3 +12,4 @@ wx:
     subAppId: #服务商模式下的子商户公众账号ID
     subMchId: #服务商模式下的子商户号
     keyPath: # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
+    notifyUrl:

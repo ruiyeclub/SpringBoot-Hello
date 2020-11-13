@@ -24,7 +24,10 @@ springboot-mail                       | [整合mail，封装MailUtils发送邮�
 springboot-mongodb                    | 集成MongoDB数据库，使用mongoTemplate操作MongoDB
 springboot-mybatis-plus               | 集成Mybatis-Plus
 springboot-oss-qiniu                  | 集成七牛云存储，封装QiniuUtil实现文件上传
+springboot-rabbitmq                   | 集成RabbitMQ消息队列
 springboot-redis                      | Redis数据库，使用redisTemplate操作Redis
+springboot-redis-lock                 | 集成Redis分布式锁
+springboot-redis-mq                   | 使用Redis实现消息队列功能
 springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
 springboot-swagger3                   | [集成Swagger3自动生成API文档](https://www.cnblogs.com/ruiyeclub/p/13334826.html)
@@ -32,6 +35,8 @@ springboot-thymeleaf                  | 集成thymeleaf模板引擎
 springboot-undertow                   | 使用Undertow服务器代替Tomcat服务器
 springboot-upload                     | [实现本地文件上传](https://www.cnblogs.com/ruiyeclub/p/12732154.html)
 springboot-validation                 | 集成validation参数验证
+springboot-vue-axios                  | 使用vue+axios实现简单的CRUD
+springboot-wxpay                      | 集成微信小程序支付功能
 
 ## 环境
 
@@ -51,10 +56,12 @@ springboot-validation                 | 集成validation参数验证
 3. 整合mail发送邮件 [√]
 4. 整合Jpa操作数据库 [√]
 5. 整合i18国际化 [√]
-6. 整合quartz定时任务
-7. 添加RabbitMQ消息队列
+6. 添加RabbitMQ消息队列 [√]
+7. 整合quartz定时任务
 8. Mybatis多数据源操作
 9. 整合Markdown文档编辑器
+10. 整合ElasticSearch全文搜索引擎
+
 
 ## 问题反馈
 

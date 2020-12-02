@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+aliyun:
+  accessKeyID: 你的accessKeyID
+  accessKeySecret: 你的accessKeySecret

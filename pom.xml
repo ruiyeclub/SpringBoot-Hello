@@ -35,6 +35,7 @@
         <module>springboot-vue-axios</module>
 <!--        <module>springboot-elasticsearch</module>-->
         <module>springboot-sms</module>
+        <module>springboot-quartz</module>
     </modules>
 
 </project>

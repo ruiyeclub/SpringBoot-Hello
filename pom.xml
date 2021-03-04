@@ -33,10 +33,11 @@
         <module>springboot-rabbitmq</module>
         <module>springboot-redis-lock</module>
         <module>springboot-vue-axios</module>
-        <module>springboot-elasticsearch</module>
         <module>springboot-sms</module>
         <module>springboot-quartz</module>
+        <module>springboot-flyway</module>
         <module>springboot-websocket</module>
+        <module>springboot-redis-ratelimit</module>
     </modules>
 
 </project>

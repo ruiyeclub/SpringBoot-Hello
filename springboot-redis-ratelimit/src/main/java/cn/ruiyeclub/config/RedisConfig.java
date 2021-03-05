@@ -8,11 +8,8 @@ import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 
 /**
- * <p>
  * Redis 配置
- * </p>
- *
- * @author yangkai.shen
+ * @author Ray。
  * @date Created in 2019/9/30 11:37
  */
 @Configuration

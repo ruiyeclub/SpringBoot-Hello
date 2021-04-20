@@ -38,6 +38,7 @@
         <module>springboot-flyway</module>
         <module>springboot-websocket</module>
         <module>springboot-redis-ratelimit</module>
+        <module>springboot-socket.io</module>
     </modules>
 
 </project>

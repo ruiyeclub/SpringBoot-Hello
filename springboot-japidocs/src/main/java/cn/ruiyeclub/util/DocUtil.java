@@ -13,7 +13,7 @@ public class DocUtil {
 	public static void main(String[] args) {
 		DocsConfig config = new DocsConfig();
 		// 项目根目录
-		config.setProjectPath("C:\\Users\\lvyii123\\Desktop\\git\\SpringBoot-Hello");
+		config.setProjectPath("你的项目路径");
 		// 项目名称
 		config.setProjectName("springboot-japidocs");
 		// 声明该API的版本

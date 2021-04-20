@@ -38,7 +38,9 @@
         <module>springboot-flyway</module>
         <module>springboot-websocket</module>
         <module>springboot-redis-ratelimit</module>
+        <module>springboot-japidocs</module>
         <module>springboot-socket.io</module>
+        <module>springboot-hutool</module>
     </modules>
 
 </project>

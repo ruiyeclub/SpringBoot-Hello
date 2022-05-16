@@ -28,7 +28,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="SysLogMap">
         select
-          id, user_id, user_action, create_time
+        id, user_id, user_action, create_time
         from sys_log
         <where>
             <if test="id != null">

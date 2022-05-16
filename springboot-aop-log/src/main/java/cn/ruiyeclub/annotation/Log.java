@@ -12,6 +12,7 @@ import java.lang.annotation.*;
 public @interface Log {
     //日志操作名称
     String value() default "";
+
     //日志级别(暂未用)
     String level() default "";
 }

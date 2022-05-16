@@ -2,6 +2,7 @@ package cn.ruiyeclub.dao;
 
 import cn.ruiyeclub.entity.SysLog;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ public interface SysLogDao {
      * 查询指定行数据
      *
      * @param offset 查询起始位置
-     * @param limit 查询条数
+     * @param limit  查询条数
      * @return 对象列表
      */
     List<SysLog> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);

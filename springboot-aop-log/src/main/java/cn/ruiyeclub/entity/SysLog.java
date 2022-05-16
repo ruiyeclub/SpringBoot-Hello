@@ -11,13 +11,13 @@ import java.io.Serializable;
  */
 public class SysLog implements Serializable {
     private static final long serialVersionUID = 974370584191486768L;
-    
+
     private Integer id;
-    
+
     private Integer userId;
-    
+
     private String userAction;
-    
+
     private Date createTime;
 
 

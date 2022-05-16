@@ -18,6 +18,7 @@ import java.util.Date;
 
 /**
  * 使用aop将@Log注解定义为切点，然后实现切面类LogAspect，在切面类实现日志在数据库的存储
+ *
  * @author Ray。
  * @create 2020-06-07 22:11
  */
@@ -33,47 +34,48 @@ public class LogAspect {
      * 表示匹配带有自定义注解的方法
      */
     @Pointcut("@annotation(cn.ruiyeclub.annotation.Log)")
-    public void pointcut(){}
+    public void pointcut() {
+    }
 
     @Around(value = "pointcut()")
-    public Object around(ProceedingJoinPoint point){
-        Object result=null;
-        long beginTime=System.currentTimeMillis();
+    public Object around(ProceedingJoinPoint point) {
+        Object result = null;
+        long beginTime = System.currentTimeMillis();
 
         try {
             log.info("我在目标方法之前执行！");
-            result=point.proceed();
-            long entTime=System.currentTimeMillis();
-            insertLog(point,entTime-beginTime);
-        }catch (Throwable e){
-            log.info("异常...{}",e);
+            result = point.proceed();
+            long entTime = System.currentTimeMillis();
+            insertLog(point, entTime - beginTime);
+        } catch (Throwable e) {
+            log.info("异常...{}", e);
         }
         return result;
     }
 
-    private void insertLog(ProceedingJoinPoint point,long time){
-        MethodSignature signature=(MethodSignature)point.getSignature();
-        Method method=signature.getMethod();
-        SysLog sysLog=new SysLog();
+    private void insertLog(ProceedingJoinPoint point, long time) {
+        MethodSignature signature = (MethodSignature) point.getSignature();
+        Method method = signature.getMethod();
+        SysLog sysLog = new SysLog();
 
         //获取注解上面的描述
-        Log userAction=method.getAnnotation(Log.class);
-        if(userAction!=null){
+        Log userAction = method.getAnnotation(Log.class);
+        if (userAction != null) {
             sysLog.setUserAction(userAction.value());
         }
 
         //请求的类名
-        String className=point.getTarget().getClass().getName();
+        String className = point.getTarget().getClass().getName();
         //请求的方法名
-        String methodName=signature.getName();
+        String methodName = signature.getName();
         //请求的方法参数值
-        String args= Arrays.toString(point.getArgs());
+        String args = Arrays.toString(point.getArgs());
 
         //TODO 从token中获取用户信息
         sysLog.setUserId(11);
         sysLog.setCreateTime(new Date());
 
-        log.info("类名：{}，方法名：{}，参数：{}，执行时间：{}",className,methodName,args,time);
+        log.info("类名：{}，方法名：{}，参数：{}，执行时间：{}", className, methodName, args, time);
         sysLogService.insert(sysLog);
 
     }

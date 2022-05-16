@@ -41,6 +41,7 @@
         <module>springboot-japidocs</module>
         <module>springboot-socket.io</module>
         <module>springboot-hutool</module>
+        <module>springboot-lambda</module>
     </modules>
 
 </project>

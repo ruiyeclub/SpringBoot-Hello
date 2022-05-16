@@ -7,16 +7,17 @@ import lombok.Setter;
 
 /**
  * 生成excel文件数据字段模板
+ *
  * @author Ray。
  */
 @Getter
 @Setter
 public class ExcelModel extends BaseRowModel {
 
-    public ExcelModel(){
+    public ExcelModel() {
     }
 
-    public ExcelModel(String dateJuly, String onDuty, String offDuty, String overtime, String last){
+    public ExcelModel(String dateJuly, String onDuty, String offDuty, String overtime, String last) {
         this.dateJuly = dateJuly;
         this.onDuty = onDuty;
         this.offDuty = offDuty;

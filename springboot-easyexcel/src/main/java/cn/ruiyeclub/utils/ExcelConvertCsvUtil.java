@@ -11,6 +11,7 @@ import java.util.Map;
 
 /**
  * excel文件转成csv格式
+ *
  * @author Ray。
  */
 public class ExcelConvertCsvUtil {
@@ -25,12 +26,12 @@ public class ExcelConvertCsvUtil {
         String buffer = "";
         Sheet sheet = null;
         Row row = null;
-        List<Map<String,String>> list = null;
+        List<Map<String, String>> list = null;
         String cellData = null;
 
-        if(wb != null){
+        if (wb != null) {
             //用来存放表中数据
-            list = new ArrayList<Map<String,String>>();
+            list = new ArrayList<Map<String, String>>();
             //获取第一个sheet
             sheet = wb.getSheetAt(0);
             //获取最大行数
@@ -39,11 +40,11 @@ public class ExcelConvertCsvUtil {
             row = sheet.getRow(0);
             //获取最大列数
             int colnum = row.getPhysicalNumberOfCells();
-            for (int i = 0; i<rownum; i++) {
+            for (int i = 0; i < rownum; i++) {
                 row = sheet.getRow(i);
                 for (int j = 0; j < colnum; j++) {
                     cellData = (String) getCellFormatValue(row.getCell(j));
-                    buffer +=cellData;
+                    buffer += cellData;
                 }
                 buffer = buffer.substring(0, buffer.lastIndexOf(",")).toString();
                 buffer += "\n";
@@ -54,26 +55,26 @@ public class ExcelConvertCsvUtil {
     }
 
     /**
-     * @Description: 读取excel
      * @param filePath 本地文件路径
+     * @Description: 读取excel
      * @Date: 2020/1/16 21:43
      * @Return: Workbook
      * @Throws: Exception
      */
-    public static Workbook readExcel(String filePath){
+    public static Workbook readExcel(String filePath) {
         Workbook wb = null;
-        if(filePath==null){
+        if (filePath == null) {
             return null;
         }
         String extString = filePath.substring(filePath.lastIndexOf("."));
         InputStream is = null;
         try {
             is = new FileInputStream(filePath);
-            if(".xls".equals(extString)){
+            if (".xls".equals(extString)) {
                 return wb = new HSSFWorkbook(is);
-            }else if(".xlsx".equals(extString)){
+            } else if (".xlsx".equals(extString)) {
                 return wb = new XSSFWorkbook(is);
-            }else{
+            } else {
                 return wb = null;
             }
         } catch (FileNotFoundException e) {
@@ -85,40 +86,43 @@ public class ExcelConvertCsvUtil {
     }
 
     /**
-     * @Description:
      * @param cell
+     * @Description:
      * @Date: 2020/1/16 21:43
      * @Return: Workbook
      * @Throws: Exception
      */
-    public static Object getCellFormatValue(Cell cell){
+    public static Object getCellFormatValue(Cell cell) {
         Object cellValue = null;
-        if(cell!=null){
+        if (cell != null) {
             //判断cell类型
-            switch(cell.getCellType()){
-                case NUMERIC:{
+            switch (cell.getCellType()) {
+                case NUMERIC: {
                     cellValue = String.valueOf(cell.getNumericCellValue()).replaceAll("\n", " ") + ",";
                     break;
                 }
-                case FORMULA:{
+                case FORMULA: {
                     //判断cell是否为日期格式
-                    if(DateUtil.isCellDateFormatted(cell)){
+                    if (DateUtil.isCellDateFormatted(cell)) {
                         //转换为日期格式YYYY-mm-dd
-                        cellValue = String.valueOf(cell.getDateCellValue()).replaceAll("\n", " ") + ",";;
-                    }else{
+                        cellValue = String.valueOf(cell.getDateCellValue()).replaceAll("\n", " ") + ",";
+                        ;
+                    } else {
                         //数字
-                        cellValue = String.valueOf(cell.getNumericCellValue()).replaceAll("\n", " ") + ",";;
+                        cellValue = String.valueOf(cell.getNumericCellValue()).replaceAll("\n", " ") + ",";
+                        ;
                     }
                     break;
                 }
-                case STRING:{
-                    cellValue = cell.getRichStringCellValue().getString().replaceAll("\n", " ") + ",";;
+                case STRING: {
+                    cellValue = cell.getRichStringCellValue().getString().replaceAll("\n", " ") + ",";
+                    ;
                     break;
                 }
                 default:
                     cellValue = "";
             }
-        }else{
+        } else {
             cellValue = "";
         }
         return cellValue;

@@ -8,9 +8,9 @@ import java.io.InputStream;
 public class DataConvertUtil {
 
     /**
+     * @param inputStream 输入流
      * @Author: jinhaoxun
      * @Description: 将inputStream转byte[]
-     * @param inputStream 输入流
      * @Date: 2020/1/16 21:43
      * @Return: byte[]
      * @Throws: Exception
@@ -26,9 +26,9 @@ public class DataConvertUtil {
     }
 
     /**
+     * @param bytes byte数组
      * @Author: jinhaoxun
      * @Description: 将byte[]转inputStream
-     * @param bytes byte数组
      * @Date: 2020/1/16 21:43
      * @Return: InputStream
      * @Throws: Exception

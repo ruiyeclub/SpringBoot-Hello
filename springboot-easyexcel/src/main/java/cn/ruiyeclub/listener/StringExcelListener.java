@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * StringList 解析监听器
+ *
  * @author Ray。
  * @date 2020/1/15 11:31
  */
@@ -26,7 +27,7 @@ public class StringExcelListener extends AnalysisEventListener {
      */
     @Override
     public void invoke(Object object, AnalysisContext context) {
-        List<String> stringList= (List<String>) object;
+        List<String> stringList = (List<String>) object;
         //数据存储到list，供批量处理，或后续自己业务逻辑处理。
         datas.add(stringList);
         //根据自己业务做处理

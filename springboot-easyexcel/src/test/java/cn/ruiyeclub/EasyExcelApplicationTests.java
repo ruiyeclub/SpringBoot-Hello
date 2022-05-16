@@ -18,7 +18,7 @@ import java.util.List;
 @Slf4j
 @SpringBootTest
 class EasyExcelApplicationTests {
-//删除多余配置
+
     @Test
     void readExcelTest() throws Exception {
         //读取excel
@@ -33,8 +33,8 @@ class EasyExcelApplicationTests {
     void writeExcelTest() throws Exception {
         //单sheet,单table导出测试
         List<ExcelModel> excelModelList = new ArrayList<ExcelModel>();
-        for (int i = 0;i<5;i++){
-            ExcelModel excelModel = new ExcelModel("日期"+i, "上班时间" + i,
+        for (int i = 0; i < 5; i++) {
+            ExcelModel excelModel = new ExcelModel("日期" + i, "上班时间" + i,
                     "下班时间" + i, "加班时长" + i, "备注" + i);
             excelModelList.add(excelModel);
         }
@@ -49,7 +49,7 @@ class EasyExcelApplicationTests {
     void convertExcelToCsvTest() throws Exception {
         //读取excel
         File file = new File("E:\\2.xlsx");
-        File file1= new File("E:\\3.csv");
+        File file1 = new File("E:\\3.csv");
         InputStream inputStream = new FileInputStream(file);
         byte[] bytes = DataConvertUtil.inputStreamTobyte2(inputStream);
         byte[] bytes1 = ExcelConvertCsvUtil.convertExcelToCsv(bytes);
@@ -59,12 +59,12 @@ class EasyExcelApplicationTests {
     }
 
     @BeforeEach
-    void testBefore(){
+    void testBefore() {
         log.info("测试开始!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
     @AfterEach
-    void testAfter(){
+    void testAfter() {
         log.info("测试结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 

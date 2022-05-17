@@ -16,10 +16,14 @@ Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来�
 --------------------------------------|------------------------------------------------------------------------------------------
 springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
+springboot-flyway                     | 集成flyway数据库版本控制
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
+springboot-hutool                     | Java工具包类库
 springboot-i18n                       | 集成i18n实现后台国际化
+springboot-japidocs                   | API文档生成工具
 springboot-jpa                        | 整合Jpa实现增删改查
 springboot-jwt                        | [集成JWT实现接口权限认证](https://www.cnblogs.com/ruiyeclub/p/12951145.html)
+springboot-lambda                     | Java8特性Lambda表达式
 springboot-mail                       | [整合mail，封装MailUtils发送邮件](https://www.cnblogs.com/ruiyeclub/p/13394493.html)
 springboot-mongodb                    | 集成MongoDB数据库，使用mongoTemplate操作MongoDB
 springboot-mybatis-plus               | 集成Mybatis-Plus
@@ -28,15 +32,20 @@ springboot-rabbitmq                   | 集成RabbitMQ消息队列
 springboot-redis                      | Redis数据库，使用redisTemplate操作Redis
 springboot-redis-lock                 | 集成Redis分布式锁
 springboot-redis-mq                   | 使用Redis实现消息队列功能
+springboot-redis-ratelimit            | 使用Redis实现接口限流功能
 springboot-scheduled                  | 定时任务
 springboot-shiro                      | [集成Shiro权限管理](https://www.cnblogs.com/ruiyeclub/p/12469920.html)
+springboot-sms                        | 整合阿里云SMS短信服务
+springboot-socket.io                  | 集成socket.io服务端和客户端实现通信
 springboot-swagger3                   | [集成Swagger3自动生成API文档](https://www.cnblogs.com/ruiyeclub/p/13334826.html)
 springboot-thymeleaf                  | 集成thymeleaf模板引擎
 springboot-undertow                   | 使用Undertow服务器代替Tomcat服务器
 springboot-upload                     | [实现本地文件上传](https://www.cnblogs.com/ruiyeclub/p/12732154.html)
 springboot-validation                 | 集成validation参数验证
 springboot-vue-axios                  | 使用vue+axios实现简单的CRUD
+springboot-websocket                  | 整合websocket
 springboot-wxpay                      | 集成微信小程序支付功能
+springboot-xxl-job                    | XXL-JOB分布式任务调度平台
 
 ## 环境
 
@@ -48,6 +57,7 @@ springboot-wxpay                      | 集成微信小程序支付功能
 * mongodb
 * git 版本管理
 * redis 缓存
+* XXL-JOB 分布式任务调度平台
 
 ## 后续计划
 
@@ -57,11 +67,11 @@ springboot-wxpay                      | 集成微信小程序支付功能
 4. 整合Jpa操作数据库 [√]
 5. 整合i18国际化 [√]
 6. 添加RabbitMQ消息队列 [√]
-7. 整合quartz定时任务
+7. 整合quartz定时任务 [√]
 8. Mybatis多数据源操作
 9. 整合Markdown文档编辑器
 10. 整合ElasticSearch全文搜索引擎
-
+11. 整合kafka消息队列
 
 ## 问题反馈
 

@@ -42,6 +42,7 @@
         <module>springboot-socket.io</module>
         <module>springboot-hutool</module>
         <module>springboot-lambda</module>
+        <module>springboot-xxl-job</module>
     </modules>
 
 </project>

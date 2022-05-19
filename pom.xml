@@ -43,6 +43,7 @@
         <module>springboot-hutool</module>
         <module>springboot-lambda</module>
         <module>springboot-xxl-job</module>
+        <module>springboot-fastjson2</module>
     </modules>
 
 </project>

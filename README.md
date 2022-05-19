@@ -16,6 +16,7 @@ Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来�
 --------------------------------------|------------------------------------------------------------------------------------------
 springboot-aop-log                    | 使用AOP记录日志
 springboot-easyexcel                  | 使用更好用的阿里巴巴表格工具EasyExcel
+springboot-fastjson2                  | 使用fastjson2
 springboot-flyway                     | 集成flyway数据库版本控制
 springboot-hibernate-validator        | [集成Hibernate Validator](https://www.cnblogs.com/ruiyeclub/p/13141467.html)
 springboot-hutool                     | Java工具包类库

@@ -44,6 +44,7 @@
         <module>springboot-lambda</module>
         <module>springboot-xxl-job</module>
         <module>springboot-fastjson2</module>
+        <module>springboot-shiro-jwt</module>
     </modules>
 
 </project>

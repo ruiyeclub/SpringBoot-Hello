@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ruiyeclub.dao.SysPermissionDao">
+
+    <resultMap type="cn.ruiyeclub.entity.SysPermission" id="SysPermissionMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="permission" column="permission" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="findPermissionByRoleId" resultType="cn.ruiyeclub.entity.SysPermission">
+        SELECT
+            sys_permission.id,
+            sys_permission.`name`,
+            sys_permission.permission,
+            sys_permission.url
+        FROM
+            (sys_permission, sys_role)
+        RIGHT JOIN sys_role_permission ON sys_permission.id = sys_role_permission.permission_id
+        AND sys_role_permission.role_id = sys_role.id
+        WHERE sys_role.id=#{roleId}
+    </select>
+
+</mapper>

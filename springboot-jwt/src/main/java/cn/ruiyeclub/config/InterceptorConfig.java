@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 拦截所有请求 去拦截器
+ *
  * @author Ray。
  * @create 2020-05-24 10:52
  */

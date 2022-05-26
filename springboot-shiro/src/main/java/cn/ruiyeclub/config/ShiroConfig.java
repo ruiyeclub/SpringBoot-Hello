@@ -13,6 +13,7 @@ import java.util.Map;
 /**
  * 拦截功能以及授权功能都在这里配置
  * Shiro可控制的Web请求必须经过Shiro主过滤器的拦截
+ *
  * @author Ray。
  * @create 2020-03-11 14:28
  */
@@ -20,13 +21,13 @@ import java.util.Map;
 public class ShiroConfig {
     //1.创建realm对象 需要自定义
     @Bean
-    public UserRealm userRealm(){
+    public UserRealm userRealm() {
         return new UserRealm();
     }
 
     //2.DefaultWebSecurityManager权限管理
     @Bean(name = "securityManager")
-    public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier("userRealm") UserRealm userRealm){
+    public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier("userRealm") UserRealm userRealm) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         //关联UserRealm
         securityManager.setRealm(userRealm);
@@ -35,7 +36,7 @@ public class ShiroConfig {
 
     //3.ShiroFilterFactoryBean过滤器配置
     @Bean
-    public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier("securityManager")DefaultWebSecurityManager defaultWebSecurityManager){
+    public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier("securityManager") DefaultWebSecurityManager defaultWebSecurityManager) {
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         //设置安全管理器
         bean.setSecurityManager(defaultWebSecurityManager);
@@ -50,13 +51,13 @@ public class ShiroConfig {
          */
         Map<String, String> filterMap = new LinkedHashMap<>();
         //授权
-        filterMap.put("/user/add","perms[user:add]"); //进入需要授权（授权规则用户后面接：add）才可以进入add
-        filterMap.put("/user/update","perms[user:update]");
+        filterMap.put("/user/add", "perms[user:add]"); //进入需要授权（授权规则用户后面接：add）才可以进入add
+        filterMap.put("/user/update", "perms[user:update]");
 
         //拦截功能 *拦截功能写在上面会错*
 //        filterMap.put("/user/add","anon");
 //        filterMap.put("/user/update","authc");
-        filterMap.put("/user/*","authc"); //表示访问user接口的资源都要认证
+        filterMap.put("/user/*", "authc"); //表示访问user接口的资源都要认证
         bean.setFilterChainDefinitionMap(filterMap);
 
         //******处理权限不够或者需要授权的业务********
@@ -69,10 +70,11 @@ public class ShiroConfig {
 
     /**
      * 配置ShiroDialect，用于Shiro和thymeleaf标签配合使用
+     *
      * @return
      */
     @Bean
-    public ShiroDialect shiroDialect(){
+    public ShiroDialect shiroDialect() {
         return new ShiroDialect();
     }
 }

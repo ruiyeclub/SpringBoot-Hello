@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import io.jsonwebtoken.Claims;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -20,9 +21,11 @@ import java.lang.reflect.Method;
  */
 public class AuthenticationInterceptor implements HandlerInterceptor {
 
-    public static final Gson gson=new Gson();
+    public static final Gson gson = new Gson();
+
     /**
      * 进入controller之前进行拦截
+     *
      * @param request
      * @param response
      * @param object
@@ -51,17 +54,17 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         if (method.isAnnotationPresent(CheckToken.class)) {
             CheckToken checkToken = method.getAnnotation(CheckToken.class);
             if (checkToken.required()) {
-                if(token!=null){
-                    Claims claims= JwtUtils.checkJWT(token);
-                    if(null==claims){
+                if (token != null) {
+                    Claims claims = JwtUtils.checkJWT(token);
+                    if (null == claims) {
                         sendJsonMessage(response, JsonData.buildError("token有误"));
                         return false;
                     }
-                    Integer userId= (Integer) claims.get("id");
+                    Integer userId = (Integer) claims.get("id");
                     String name = (String) claims.get("name");
 
-                    request.setAttribute("userId",userId);
-                    request.setAttribute("name",name);
+                    request.setAttribute("userId", userId);
+                    request.setAttribute("name", name);
                     return true;
                 }
                 //token为null的话 返回一段json给前端
@@ -73,17 +76,18 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         return true;
     }
 
-        /**
-         * 响应数据给前端
-         * @param response
-         * @param obj
-         * @throws IOException
-         */
-        public static void sendJsonMessage (HttpServletResponse response, Object obj) throws IOException {
-            response.setContentType("application/json; charset=utf-8");
-            PrintWriter writer = response.getWriter();
-            writer.print(gson.toJson(obj));
-            writer.close();
-            response.flushBuffer();
-        }
+    /**
+     * 响应数据给前端
+     *
+     * @param response
+     * @param obj
+     * @throws IOException
+     */
+    public static void sendJsonMessage(HttpServletResponse response, Object obj) throws IOException {
+        response.setContentType("application/json; charset=utf-8");
+        PrintWriter writer = response.getWriter();
+        writer.print(gson.toJson(obj));
+        writer.close();
+        response.flushBuffer();
+    }
 }

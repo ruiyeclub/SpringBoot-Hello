@@ -166,32 +166,6 @@ INSERT INTO `user` VALUES (3, '我爱java', '545', NULL);
 INSERT INTO `user` VALUES (4, 'admin', '123456', 'user:update');
 
 -- ----------------------------
--- Table structure for user_msg
--- ----------------------------
-DROP TABLE IF EXISTS `user_msg`;
-CREATE TABLE `user_msg`  (
-  `id` int(0) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `create_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
-  `update_time` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of user_msg
--- ----------------------------
-INSERT INTO `user_msg` VALUES (1, '亪', '今天不开心', '2018-08-14 14:26:02', '2018-08-14 14:26:02');
-INSERT INTO `user_msg` VALUES (2, '祐', '不错呀', '2018-08-14 15:09:40', '2018-08-14 15:09:40');
-INSERT INTO `user_msg` VALUES (3, '搈', '开心 开心', '2018-08-14 15:09:40', '2018-08-14 15:09:40');
-INSERT INTO `user_msg` VALUES (4, '兇', '可以的，后面再做个深入一点的', '2018-08-14 15:18:35', '2018-08-14 15:18:35');
-INSERT INTO `user_msg` VALUES (5, '倎', '开源这个项目', '2018-08-14 15:18:35', '2018-08-14 15:18:35');
-INSERT INTO `user_msg` VALUES (6, '蝡', '1-someting', '2018-08-14 15:24:28', '2018-08-14 15:24:28');
-INSERT INTO `user_msg` VALUES (7, '弔', '不行呀', '2018-08-14 15:24:29', '2018-08-14 15:24:29');
-INSERT INTO `user_msg` VALUES (8, '習', '可以的', '2018-08-14 15:26:03', '2018-08-14 15:26:03');
-INSERT INTO `user_msg` VALUES (9, '蔫', '开源这个项目', '2018-08-14 15:26:03', '2018-08-14 15:26:03');
-
--- ----------------------------
 -- Table structure for user_record
 -- ----------------------------
 DROP TABLE IF EXISTS `user_record`;

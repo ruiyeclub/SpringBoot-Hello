@@ -14,8 +14,8 @@
             sys_role.description,
             sys_role.role
         FROM
-            user_info
-        RIGHT JOIN sys_user_role ON user_info.id = sys_user_role.uid
+            sys_user
+        RIGHT JOIN sys_user_role ON sys_user.id = sys_user_role.uid
         LEFT JOIN sys_role ON sys_user_role.role_id = sys_role.id
         WHERE username=#{username}
     </select>

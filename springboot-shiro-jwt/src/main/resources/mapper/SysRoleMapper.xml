@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ruiyeclub.dao.SysRoleDao">
+
+    <resultMap type="cn.ruiyeclub.entity.SysRole" id="SysRoleMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="role" column="role" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="findRoleByUsername" resultType="cn.ruiyeclub.entity.SysRole">
+        SELECT
+            sys_role.id,
+            sys_role.description,
+            sys_role.role
+        FROM
+            sys_user
+        RIGHT JOIN sys_user_role ON sys_user.id = sys_user_role.uid
+        LEFT JOIN sys_role ON sys_user_role.role_id = sys_role.id
+        WHERE username=#{username}
+    </select>
+
+</mapper>

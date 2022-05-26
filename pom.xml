@@ -45,6 +45,7 @@
         <module>springboot-xxl-job</module>
         <module>springboot-fastjson2</module>
         <module>springboot-shiro-jwt</module>
+        <module>springboot-shiro-jwt-redis</module>
     </modules>
 
 </project>

@@ -11,7 +11,7 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 26/05/2022 10:14:01
+ Date: 26/05/2022 16:52:08
 */
 
 SET NAMES utf8mb4;
@@ -135,15 +135,15 @@ INSERT INTO `sys_user` VALUES (2, '测试', 'e10adc3949ba59abbe56e057f20f883e', 
 DROP TABLE IF EXISTS `sys_user_role`;
 CREATE TABLE `sys_user_role`  (
   `role_id` int(0) NOT NULL,
-  `uid` int(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`role_id`) USING BTREE
+  `uid` int(0) NOT NULL,
+  PRIMARY KEY (`uid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_user_role
 -- ----------------------------
 INSERT INTO `sys_user_role` VALUES (1, 1);
-INSERT INTO `sys_user_role` VALUES (3, 2);
+INSERT INTO `sys_user_role` VALUES (1, 2);
 
 -- ----------------------------
 -- Table structure for user

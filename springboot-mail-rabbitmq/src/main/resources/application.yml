@@ -1,0 +1,34 @@
+server:
+  port: 81
+
+spring:
+  # mq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  #邮箱发送的配置 网易的配置要加from参数
+  mail:
+    host: smtp.qq.com
+    #邮箱账号
+    username: 185048761@qq.com
+    #邮箱密码或授权码
+    password:
+    #协议
+    protocol: smtp
+    #这里换成自己的邮箱类型 例如qq邮箱就写smtp.qq.com
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465 #端口号465或587
+    properties.mail.display.sendmail: aaa #可以任意
+    properties.mail.display.sendname: bbb #可以任意
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true #开启SSL
+    default-encoding: utf-8
+
+  freemarker:
+    cache: false # 缓存配置 开发阶段应该配置为false 因为经常会改
+    suffix: .html # 模版后缀名 默认为ftl
+    charset: UTF-8 # 文件编码
+    template-loader-path: classpath:/templates/  # 存放模板的文件夹，以resource文件夹为相对路径

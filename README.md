@@ -1,4 +1,4 @@
-![springboot-hello](https://socialify.git.ci/ruiyeclub/SpringBoot-Hello?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
+![springboot-hello](https://socialify.git.ci/ruiyeclub/SpringBoot-Hello/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
 ## SpringBoot 全家桶
 
 Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。

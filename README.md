@@ -74,6 +74,8 @@ springboot-xxl-job                    | XXL-JOB分布式任务调度平台
 9. 整合Markdown文档编辑器
 10. 整合ElasticSearch全文搜索引擎
 11. 整合kafka消息队列
+12. 整合sentinel接口限流
+13. 整合分Seata布式事务中间件
 
 ## 问题反馈
 

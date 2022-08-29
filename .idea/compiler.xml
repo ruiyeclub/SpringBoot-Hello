@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-thymeleaf" />
+        <module name="springboot-i18n" />
+        <module name="springboot-hibernate-validator" />
+        <module name="springboot-shiro" />
+        <module name="springboot-socket.io" />
+        <module name="springboot-undertow" />
+        <module name="springboot-jpa" />
+        <module name="springboot-sms" />
+        <module name="springboot-scheduled" />
+        <module name="springboot-es" />
+        <module name="springboot-websocket" />
+        <module name="springboot-rabbitmq" />
+        <module name="springboot-redis-lock" />
+        <module name="springboot-vue-axios" />
+        <module name="springboot-mail" />
+        <module name="springboot-shiro-jwt-redis" />
+        <module name="springboot-shiro-jwt" />
+        <module name="springboot-oss-qiniu" />
+        <module name="springboot-jwt" />
+        <module name="springboot-upload" />
+        <module name="springboot-mybatis-plus" />
+        <module name="springboot-xxl-job" />
+        <module name="springboot-mail-rabbitmq" />
+        <module name="springboot-lambda" />
+        <module name="springboot-hutool" />
+        <module name="springboot-redis" />
+        <module name="springboot-wxpay" />
+        <module name="springboot-japidocs" />
+        <module name="springboot-flyway" />
+        <module name="springboot-swagger3" />
+        <module name="springboot-aop-log" />
+        <module name="springboot-redis-mq" />
+        <module name="springboot-easyexcel" />
+        <module name="springboot-redis-ratelimit" />
+        <module name="springboot-fastjson2" />
+        <module name="springboot-validation" />
+        <module name="springboot-mongodb" />
+        <module name="springboot-quartz" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-aop-log" options="-parameters" />
+      <module name="springboot-easyexcel" options="-parameters" />
+      <module name="springboot-es" options="-parameters" />
+      <module name="springboot-fastjson2" options="-parameters" />
+      <module name="springboot-flyway" options="-parameters" />
+      <module name="springboot-hibernate-validator" options="-parameters" />
+      <module name="springboot-i18n" options="-parameters" />
+      <module name="springboot-japidocs" options="-parameters" />
+      <module name="springboot-jpa" options="-parameters" />
+      <module name="springboot-jwt" options="-parameters" />
+      <module name="springboot-lambda" options="-parameters" />
+      <module name="springboot-mail" options="-parameters" />
+      <module name="springboot-mail-rabbitmq" options="-parameters" />
+      <module name="springboot-mongodb" options="-parameters" />
+      <module name="springboot-mybatis-plus" options="-parameters" />
+      <module name="springboot-oss-qiniu" options="-parameters" />
+      <module name="springboot-quartz" options="-parameters" />
+      <module name="springboot-rabbitmq" options="-parameters" />
+      <module name="springboot-redis" options="-parameters" />
+      <module name="springboot-redis-lock" options="-parameters" />
+      <module name="springboot-redis-mq" options="-parameters" />
+      <module name="springboot-redis-ratelimit" options="-parameters" />
+      <module name="springboot-scheduled" options="-parameters" />
+      <module name="springboot-shiro" options="-parameters" />
+      <module name="springboot-shiro-jwt" options="-parameters" />
+      <module name="springboot-shiro-jwt-redis" options="-parameters" />
+      <module name="springboot-sms" options="-parameters" />
+      <module name="springboot-socket.io" options="-parameters" />
+      <module name="springboot-swagger3" options="-parameters" />
+      <module name="springboot-thymeleaf" options="-parameters" />
+      <module name="springboot-undertow" options="-parameters" />
+      <module name="springboot-upload" options="-parameters" />
+      <module name="springboot-validation" options="-parameters" />
+      <module name="springboot-vue-axios" options="-parameters" />
+      <module name="springboot-websocket" options="-parameters" />
+      <module name="springboot-wxpay" options="-parameters" />
+      <module name="springboot-xxl-job" options="-parameters" />
+    </option>
+  </component>
+</project>

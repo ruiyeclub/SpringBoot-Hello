@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
+
     @Resource
     private UserDao userDao;
 
@@ -34,7 +35,7 @@ public class UserServiceImpl implements UserService {
      * 查询多条数据
      *
      * @param offset 查询起始位置
-     * @param limit 查询条数
+     * @param limit  查询条数
      * @return 对象列表
      */
     @Override

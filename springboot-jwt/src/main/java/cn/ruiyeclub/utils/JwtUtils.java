@@ -32,15 +32,13 @@ public class JwtUtils {
         if (user == null || user.getId() == null || user.getName() == null || user.getPassword() == null) {
             return null;
         }
-        String token = Jwts.builder().setSubject(SUBJECT)
+        return Jwts.builder().setSubject(SUBJECT)
                 .claim("id", user.getId())
                 .claim("name", user.getName())
                 .claim("password", user.getPassword())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
                 .signWith(SignatureAlgorithm.HS256, APPSECRET).compact();
-
-        return token;
     }
 
     /**

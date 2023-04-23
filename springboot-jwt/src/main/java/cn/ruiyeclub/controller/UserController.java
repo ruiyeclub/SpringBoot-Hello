@@ -26,13 +26,14 @@ public class UserController {
 
     /**
      * 登录
+     *
      * @param user
      * @return
      */
     @PostMapping("/login")
     @LoginToken
     public JsonData login(@RequestBody User user) {
-        if(user==null || user.getName()==null || user.getPassword()==null){
+        if (user == null || user.getName() == null || user.getPassword() == null) {
             return JsonData.buildError("请检查登录参数");
         }
         User userForBase = userService.findByUsername(user);
@@ -43,7 +44,7 @@ public class UserController {
                 return JsonData.buildError("登录失败,密码错误");
             } else {
                 String token = JwtUtils.geneJsonWebToken(userForBase);
-                Map map=new HashMap();
+                Map<String, Object> map = new HashMap<>(8);
                 map.put("token", token);
                 map.put("user", userForBase);
                 return JsonData.buildSuccess(map);

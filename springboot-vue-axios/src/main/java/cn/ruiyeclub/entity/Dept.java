@@ -16,7 +16,7 @@ import lombok.Data;
 @TableName("dept")
 public class Dept extends Model<Dept> {
 
-    @TableId(value = "deptno",type = IdType.AUTO)
+    @TableId(value = "deptno", type = IdType.AUTO)
     private Long deptno;
 
     private String dname;

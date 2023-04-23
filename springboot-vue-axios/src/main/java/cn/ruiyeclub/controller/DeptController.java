@@ -85,7 +85,7 @@ public class DeptController extends ApiController {
     }
 
     @GetMapping("findAll")
-    public List<Dept> findAll(){
+    public List<Dept> findAll() {
         return deptService.list();
     }
 }

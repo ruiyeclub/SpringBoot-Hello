@@ -10,6 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class VueAxiosApplication {
     public static void main(String[] args) {
-        SpringApplication.run(VueAxiosApplication.class,args);
+        SpringApplication.run(VueAxiosApplication.class, args);
     }
 }

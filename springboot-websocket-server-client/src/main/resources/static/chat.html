@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #messages {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        #messageInput {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #sendButton {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>WebSocket Client</h1>
+<div>
+    <label for="messageInput">Message:</label>
+    <input type="text" id="messageInput" placeholder="Enter your message here">
+    <button id="sendButton">Send</button>
+</div>
+<div id="messages">
+    <h3>Messages:</h3>
+</div>
+
+<script>
+    const wsUri = "ws://localhost:8080/connect";
+    const websocket = new WebSocket(wsUri);
+
+    websocket.onopen = function(event) {
+        displayMessage("Connected to WebSocket server");
+    };
+
+    websocket.onmessage = function(event) {
+        displayMessage("Received: " + event.data);
+    };
+
+    websocket.onclose = function(event) {
+        displayMessage("Disconnected from WebSocket server");
+    };
+
+    websocket.onerror = function(event) {
+        displayMessage("Error: " + event.data);
+    };
+
+    document.getElementById("sendButton").onclick = function() {
+        const message = document.getElementById("messageInput").value;
+        websocket.send(message);
+        displayMessage("Sent: " + message);
+    };
+
+    function displayMessage(message) {
+        const messagesDiv = document.getElementById("messages");
+        const newMessage = document.createElement("div");
+        newMessage.textContent = message;
+        messagesDiv.appendChild(newMessage);
+    }
+</script>
+</body>
+</html>

@@ -48,6 +48,7 @@
         <module>springboot-shiro-jwt-redis</module>
         <module>springboot-mail-rabbitmq</module>
         <module>springboot-async</module>
+        <module>springboot-websocket-server-client</module>
     </modules>
 
 </project>

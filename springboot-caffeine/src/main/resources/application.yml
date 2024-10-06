@@ -1,0 +1,9 @@
+server:
+  port: 81
+
+# 配置数据源
+spring:
+  cache:
+    type: caffeine
+    caffeine:
+      spec: initialCapacity=100,maximumSize=200,expireAfterWrite=5m

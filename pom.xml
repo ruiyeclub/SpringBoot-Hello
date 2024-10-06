@@ -49,6 +49,7 @@
         <module>springboot-mail-rabbitmq</module>
         <module>springboot-async</module>
         <module>springboot-websocket-server-client</module>
+        <module>springboot-caffeine</module>
     </modules>
 
 </project>

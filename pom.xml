@@ -51,6 +51,7 @@
         <module>springboot-websocket-server-client</module>
         <module>springboot-caffeine</module>
         <module>springboot-knife4j</module>
+        <module>springboot-kaptcha</module>
     </modules>
 
 </project>

@@ -52,6 +52,7 @@
         <module>springboot-caffeine</module>
         <module>springboot-knife4j</module>
         <module>springboot-kaptcha</module>
+        <module>springbot-nacos</module>
     </modules>
 
 </project>

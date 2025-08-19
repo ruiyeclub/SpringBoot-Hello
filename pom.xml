@@ -53,6 +53,7 @@
         <module>springboot-knife4j</module>
         <module>springboot-kaptcha</module>
         <module>springboot-nacos</module>
+        <module>springboot-redisson-mq</module>
     </modules>
 
 </project>
